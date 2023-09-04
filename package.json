@@ -27,7 +27,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.28.1",
-    "hint": "^7.1.10",
+    "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.3",
     "jest": "^29.6.4",
     "jest-environment-jsdom": "^29.6.4",
@@ -45,6 +45,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@lhci/cli": "^0.11.1",
     "express": "^4.18.2"
   },
   "jest": {
