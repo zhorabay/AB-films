@@ -20,7 +20,7 @@ Universal-movie-website  <h3><b></b></h3>
   - [📝 License ](#-license-)
 
 
-**[Universal-movie-website]** This wesite showws movies // update this column later<br />
+**[A&B films]** shows list of popular movies<br />
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -28,19 +28,20 @@ Universal-movie-website  <h3><b></b></h3>
  - HTML 
  - CSS
  - JAVASCRIPT
+ - WEBPACK
  - API
 
 ### Key Features <a name="key-features"></a>
 
-- **[Used plain Javascript]**
-- **[When the user clicks "Add" button, it adds the book to the list]**
-- **[When the user clicks "Remove" button, it removes the book from the list]**
+- **[When the user clickc the movie, popup window appears with the information about chosen film]**
+- **[The user can comment using "Comment" textarea in the popup window]**
+- **[When the user clicks "Like" icon, it increases amount of likes]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo link](https://zhorabay.github.io/Awesome-books/)
+- [Live Demo link](https://zhorabay.github.io/AB-films/dist)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -57,10 +58,11 @@ To get a local copy up and running follow these simple example steps.
 
 - Choose a directory
 - Open a Terminal
-- write: git clone git@github.com:zhorabay/Awesome-books.git
-- get into to directory "Awesome-books"
+- write: git clone git@github.com:zhorabay/AB-films.git
+- get into to directory "AB-films"
 - write: npm install
-[
+- then write: npm start
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -81,8 +83,8 @@ To get a local copy up and running follow these simple example steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Refactor to use JavaScript classes]**
-- [ ] **[Complete website with navigation]**
+- [ ] **[Add Watch Later list]**
+- [ ] **[Add search area]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +93,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/zhorabay/Awesome-books/issues/2)
+Feel free to check the [issues page](https://github.com/zhorabay/AB-films/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,7 +108,6 @@ If you like this project, pplease, feel free to star the repository and share it
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse team and Code reviewers who helped us with creating this project.
-Also , I would like to thank my coding partner from previous week @zhorabay who helped me for date and time . 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
