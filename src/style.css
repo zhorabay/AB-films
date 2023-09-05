@@ -1,4 +1,45 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'DM Serif Display', serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 18px;
+  background-color: darkblue;
+}
+
+.nav img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+footer {
+  margin-top: 85%;
+  background-color: darkblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.license {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
 }
