@@ -10,12 +10,13 @@
   align-items: center;
   gap: 50px;
   padding: 10px;
-  background-color: darkblue;
+  background-color: black;
 }
 
 .nav img {
-  width: 40px;
+  width: 55px;
   height: 40px;
+  border-radius: 6px;
 }
 
 .nav-list {
@@ -45,16 +46,23 @@ footer {
 }
 
 .display {
+  background-color: rgb(20, 20, 20);
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
   gap: 16px;
-  margin: 30px 90px;
+  padding: 30px 90px;
   text-align: center;
 }
 
 .films {
   border: 1px solid grey;
   padding: 12px;
+}
+
+.films:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
 }
 
 .title {
@@ -69,7 +77,14 @@ footer {
   font-size: 22px;
   flex-wrap: wrap;
   font-weight: 500;
-  color: darkblue;
+  color: #fff;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .like i {
@@ -79,6 +94,7 @@ footer {
 .like p {
   font-style: italic;
   font-weight: 300;
+  color: antiquewhite;
 }
 
 .comment {
@@ -87,4 +103,12 @@ footer {
   border-radius: 6px;
   font-size: 16px;
   color: #fff;
+  background-color: #ec5242;
+}
+
+.comment:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  background-color: #d04839;
 }
