@@ -9,13 +9,13 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding: 18px;
+  padding: 10px;
   background-color: darkblue;
 }
 
 .nav img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-list {
@@ -32,7 +32,7 @@
 }
 
 footer {
-  margin-top: 85%;
+  margin-top: 10px;
   background-color: darkblue;
   text-align: center;
   padding: 20px;
@@ -40,6 +40,51 @@ footer {
 
 .license {
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.display {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  gap: 16px;
+  margin: 30px 90px;
+  text-align: center;
+}
+
+.films {
+  border: 1px solid grey;
+  padding: 12px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.film-name {
+  font-size: 22px;
+  flex-wrap: wrap;
+  font-weight: 500;
+  color: darkblue;
+}
+
+.like i {
+  color: red;
+}
+
+.like p {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.comment {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
   font-size: 16px;
   color: #fff;
 }
