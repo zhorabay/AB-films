@@ -56,7 +56,11 @@ footer {
 
 .films {
   border: 1px solid grey;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
   padding: 12px;
+  background: rgb(193,66,236);
+  background: linear-gradient(180deg, rgba(193,66,236,1) 0%, rgba(202,104,235,1) 0%, rgba(20,20,20,0.7973564425770308) 17%);
 }
 
 .films:hover {
@@ -95,6 +99,7 @@ footer {
   font-style: italic;
   font-weight: 300;
   color: antiquewhite;
+  font-size: 18px;
 }
 
 .comment {
@@ -103,12 +108,13 @@ footer {
   border-radius: 6px;
   font-size: 16px;
   color: #fff;
-  background-color: #ec5242;
+  background-color: #cd79f1;
 }
 
 .comment:hover {
   transform: scale(1.03);
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
-  background-color: #d04839;
+  background-color: #fff;
+  color: black;
 }
