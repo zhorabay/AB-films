@@ -59,8 +59,8 @@ footer {
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
   padding: 12px;
-  background: rgb(193,66,236);
-  background: linear-gradient(180deg, rgba(193,66,236,1) 0%, rgba(202,104,235,1) 0%, rgba(20,20,20,0.7973564425770308) 17%);
+  background: rgb(193, 66, 236);
+  background: linear-gradient(180deg, rgba(193, 66, 236, 1) 0%, rgba(202, 104, 235, 1) 0%, rgba(20, 20, 20, 0.7973564425770308) 17%);
 }
 
 .films:hover {
