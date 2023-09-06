@@ -1,10 +1,17 @@
 import fetchDataFromAPI from './fetchData.js';
-import displayLikes from './displayLikes.js';
+import fetchLikes from './displayLikes.js';
 
 const displayItems = async () => {
-  const data = await fetchDataFromAPI() & displayLikes();
+  const [likesData, baseData] = await Promise.all([fetchLikes(), fetchDataFromAPI()]);
+  const combinedData = baseData.map((show) => {
+    const likes = likesData.find((like) => like.item_id === show.id);
+    return {
+      ...show,
+      likes: likes ? likes.likes : 0,
+    };
+  });
   let items = '';
-  data.forEach((values) => {
+  combinedData.forEach((values) => {
     items += `
           <div class="films">
               <div class="film-image">
