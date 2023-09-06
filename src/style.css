@@ -13,6 +13,11 @@
   background-color: black;
 }
 
+img {
+  overflow: hidden;
+  width: 100%;
+}
+
 .nav img {
   width: 55px;
   height: 40px;
@@ -48,7 +53,7 @@ footer {
 .display {
   background-color: rgb(20, 20, 20);
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: 25% 25% 25% 25%;
   gap: 16px;
   padding: 30px 90px;
   text-align: center;
