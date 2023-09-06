@@ -9,13 +9,19 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding: 18px;
-  background-color: darkblue;
+  padding: 10px;
+  background-color: black;
+}
+
+img {
+  overflow: hidden;
+  width: 100%;
 }
 
 .nav img {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 40px;
+  border-radius: 6px;
 }
 
 .nav-list {
@@ -32,7 +38,7 @@
 }
 
 footer {
-  margin-top: 85%;
+  margin-top: 10px;
   background-color: darkblue;
   text-align: center;
   padding: 20px;
@@ -42,4 +48,78 @@ footer {
   text-decoration: none;
   font-size: 16px;
   color: #fff;
+}
+
+.display {
+  background-color: rgb(20, 20, 20);
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 16px;
+  padding: 30px 90px;
+  text-align: center;
+}
+
+.films {
+  border: 1px solid grey;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 12px;
+  background: rgb(193, 66, 236);
+  background: linear-gradient(180deg, rgba(193, 66, 236, 1) 0%, rgba(202, 104, 235, 1) 0%, rgba(20, 20, 20, 0.7973564425770308) 17%);
+}
+
+.films:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.film-name {
+  font-size: 22px;
+  flex-wrap: wrap;
+  font-weight: 500;
+  color: #fff;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.like i {
+  color: red;
+}
+
+.like p {
+  font-style: italic;
+  font-weight: 300;
+  color: antiquewhite;
+  font-size: 18px;
+}
+
+.comment {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #cd79f1;
+}
+
+.comment:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  background-color: #fff;
+  color: black;
 }
