@@ -1,7 +1,8 @@
 import fetchDataFromAPI from './fetchData.js';
+import displayLikes from './displayLikes.js';
 
 const displayItems = async () => {
-  const data = await fetchDataFromAPI();
+  const data = await fetchDataFromAPI() & displayLikes();
   let items = '';
   data.forEach((values) => {
     items += `
@@ -14,7 +15,7 @@ const displayItems = async () => {
                   ${values.name}
                   </div>
                   <div class="like">
-                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-heart"> ${values.likes} </i>
                       <p class="likes">likes</p>
                   </div>
                   <button class="comment">Comments</button>
