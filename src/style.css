@@ -38,8 +38,7 @@ img {
 }
 
 footer {
-  margin-top: 10px;
-  background-color: darkblue;
+  background-color: rgb(193, 66, 236);
   text-align: center;
   padding: 20px;
 }
@@ -89,6 +88,10 @@ footer {
   color: #fff;
 }
 
+.film-image {
+  padding: 6px;
+}
+
 .like {
   display: flex;
   align-items: center;
@@ -98,6 +101,12 @@ footer {
 
 .like i {
   color: red;
+  padding: 2px;
+  font-size: 25px;
+}
+
+.like i:focus {
+  color: #fff;
 }
 
 .like p {
