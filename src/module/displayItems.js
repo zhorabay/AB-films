@@ -17,7 +17,7 @@ const displayItems = async () => {
                       <i class="fa-solid fa-heart"></i>
                       <p class="likes">likes</p>
                   </div>
-                  <button class="comment">Comments</button>
+                  <button class="comment" >Comments</button>
               </div>
           </div>`;
   });

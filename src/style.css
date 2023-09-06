@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'DM Serif Display', serif;
+  border: 1px solid red;
 }
 
 .nav {
@@ -122,4 +123,103 @@ footer {
   -ms-transform: scale(1.03);
   background-color: #fff;
   color: black;
+}
+
+/* popup styling */
+
+.popupContainer {
+  width: 70%;
+  background: #fff;
+  position: absolute;
+  border-radius: 6px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  justify-content: center;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-btn {
+  position: fixed;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.subDivOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 36px;
+}
+
+img.movie-img {
+  width: 70%;
+  height: 385px;
+  border-radius: 22px;
+}
+
+h2.movieName {
+  margin: 4px;
+  background-color: bisque;
+  color: black;
+  border-radius: 6px;
+  padding: 4px;
+  width: 56%;
+}
+
+.subDivTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.commentHeading {
+  margin: 4px;
+  background-color: bisque;
+  color: black;
+  border-radius: 6px;
+  padding: 4px;
+  width: 30%;
+}
+
+.inputComments {
+  width: 80%;
+  padding: 8px;
+}
+
+input.typeName {
+  width: 90%;
+  padding: 4px;
+  height: 28px;
+}
+
+input.typeComment {
+  width: 90%;
+  padding: 4px;
+  height: 28px;
+  margin-top: 6px;
+}
+
+.submitComment {
+  margin-top: 6px;
+  width: 62px;
+  height: 32px;
+  box-shadow: 3px 3px lightgray;
+  border-radius: 6px;
 }
