@@ -100,7 +100,6 @@ footer {
 }
 
 .like i {
-  color: red;
   padding: 2px;
   font-size: 25px;
 }
@@ -131,4 +130,12 @@ footer {
   -ms-transform: scale(1.03);
   background-color: #fff;
   color: black;
+}
+
+.fa-heart {
+  color: grey;
+}
+
+.liked {
+  color: red;
 }
