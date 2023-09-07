@@ -37,6 +37,10 @@ img {
   list-style: none;
 }
 
+.nav-list li:hover {
+  color: #cd79f1;
+}
+
 footer {
   background-color: rgb(193, 66, 236);
   text-align: center;
@@ -102,10 +106,6 @@ footer {
 .like i {
   padding: 2px;
   font-size: 25px;
-}
-
-.like i:focus {
-  color: #fff;
 }
 
 .like p {
