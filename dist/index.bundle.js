@@ -9,6 +9,7 @@
  */
 (self["webpackChunkuniversal_movie_website"] = self["webpackChunkuniversal_movie_website"] || []).push([["index"],{
 
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
@@ -109,10 +110,12 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
+
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _module_displayItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/displayItems.js */ \"./src/module/displayItems.js\");\n/* harmony import */ var _module_createPopup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/createPopup.js */ \"./src/module/createPopup.js\");\n/* harmony import */ var _module_fetchComments_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module/fetchComments.js */ \"./src/module/fetchComments.js\");\n\r\n\r\n\r\n\r\n\r\nawait (0,_module_displayItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\r\nconst commentButtons = document.querySelectorAll('.comment');\r\nconst closeButton = document.querySelector('.close-btn');\r\n\r\ncommentButtons.forEach((commentButton, index) => {\r\n  commentButton.addEventListener('click', () => (0,_module_createPopup_js__WEBPACK_IMPORTED_MODULE_2__.openPopup)(index + 1));\r\n});\r\n\r\ncloseButton.addEventListener('click', _module_createPopup_js__WEBPACK_IMPORTED_MODULE_2__.closePopup);\r\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://universal-movie-website/./src/index.js?");
@@ -156,6 +159,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst fetchDataFromAPI = async () => {\r\n  const apiURL = 'https://api.tvmaze.com/shows';\r\n  const response = await fetch(apiURL);\r\n  const data = await response.json();\r\n  return data;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchDataFromAPI);\n\n//# sourceURL=webpack://universal-movie-website/./src/module/fetchData.js?");
+=======
+/***/ (() => {
+
+eval("throw new Error(\"Module parse failed: Unexpected token (9:13)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| POST /apps/abc234/likes\\n| {\\n>     \\\"item_id\\\": \\\"item1\\\"\\n| }\\n| \");\n\n//# sourceURL=webpack://universal-movie-website/./src/index.js?");
+
 
 /***/ })
 
