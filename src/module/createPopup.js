@@ -1,15 +1,40 @@
-export default function displayPopup(){
-const commentButtons = document.querySelectorAll('.comment');
+let popup;
 
-const popup = document.querySelector('.popupContainer');
 
-function openPopup() {
-  popup.style.display = '';
+const popupContent = document.createElement('div');
+
+popupContent.innerHTML += `
+<div class="subDivOne">
+<img class="movie-img" src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg" alt="Poster"></img>
+<h2 class="movieName">Under the dome</h2>
+<form action="" class="form"></form>
+</div>
+<div class="subDivTwo">
+<h2 class="commentHeading">Comments(<span class="allComments"></span>)</h2>
+<ul class="commentsDisplay"></ul>
+<div class="inputComments">
+ <input required type="text" class="typeName" id="typeName" placeholder="Your Name"><br>
+ <input required type="text" class="typeComment"
+ id="typeComment" placeholder="Your comment"><br>
+ <button type="submit" class="submitComment" id="">Submit</button>
+</div>
+</div>
+`;
+
+
+export const openPopup = async () => {
+
+   popup = document.querySelector('.popupContainer');
+   
+popup.appendChild(popupContent);
+
+popup.style.display = 'block';
+
 }
 
-openPopup();
-
-commentButtons.forEach((commentButton) => {
-  commentButton.addEventListener('click', openPopup);
-});
+export const closePopup = async () => {
+  popup.style.display = 'none';
+  
 }
+
+

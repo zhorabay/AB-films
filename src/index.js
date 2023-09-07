@@ -1,9 +1,17 @@
 import './style.css';
 import displayItems from './module/displayItems.js';
-import displayPopup from './module/createPopup.js';
+import { openPopup, closePopup } from './module/createPopup.js';
 
-displayItems();
 
-const popup = document.querySelector('.popupContainer');
 
-popup.addEventListener('click', displayPopup);
+
+await displayItems();
+
+const commentButtons = document.querySelectorAll('.comment');
+const closeButton = document.querySelector('.close-btn');
+
+commentButtons.forEach((commentButton) => {
+    commentButton.addEventListener('click', openPopup);
+  });
+
+  closeButton.addEventListener('click', closePopup);

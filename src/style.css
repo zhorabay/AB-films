@@ -129,19 +129,22 @@ footer {
 
 .popupContainer {
   width: 70%;
-  display: none ;
+  height: 70%;
+  display: none;
   background: #fff;
-  position: absolute;
+  position: fixed;
   border-radius: 6px;
- top: 50%;
-  left: 50%;
+ top: 20%;
+  left: 20%;
+  border-radius: 6px;
   text-align: center;
   justify-content: center;
   color: #333;
+  overflow-y: scroll;
 }
 
 .close-btn {
-  position: fixed;
+  position:absolute;
   right: 0;
   width: 35px;
   height: 35px;
@@ -151,6 +154,7 @@ footer {
 
 .subDivOne {
   display: flex;
+  height: 58%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
