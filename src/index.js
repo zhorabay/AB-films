@@ -1,6 +1,7 @@
 import './style.css';
 import displayItems from './module/displayItems.js';
 import { openPopup, closePopup } from './module/createPopup.js';
+import commentSection from './module/fetchComments.js';
 
 await displayItems();
 
@@ -12,3 +13,6 @@ commentButtons.forEach((commentButton) => {
 });
 
 closeButton.addEventListener('click', closePopup);
+
+
+commentSection(1, 'Bhushan', 'hello bro how are you');
