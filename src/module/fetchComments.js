@@ -43,6 +43,5 @@ export const generateComment = async (id) => {
       commentUl.append(commentLi);
     });
   }
-
   return commentUl;
 };
