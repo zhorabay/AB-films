@@ -1,9 +1,9 @@
-const apiKey = 'FXnRwBWXn2Q28VOmP7yL';
-const end = '/comments';
-const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const apiID = 'FXnRwBWXn2Q28VOmP7yL';
+const tail = '/comments';
+const apiURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
 export const renderComment = async (id, name, comment) => {
-  const response = await fetch(`${commUrl}${apiKey}${end}`, {
+  const response = await fetch(`${apiURL}${apiID}${tail}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -14,12 +14,12 @@ export const renderComment = async (id, name, comment) => {
 };
 
 export const fetchComment = async (id) => {
-  const response = await fetch(`${commUrl}${apiKey}${end}?item_id=${id}`);
+  const response = await fetch(`${apiURL}${apiID}${tail}?item_id=${id}`);
   const comments = await response.json();
   return comments;
 };
 
-const createCommentElement = (comment) => {
+export const createCommentElement = (comment) => {
   const commentLi = document.createElement('li');
   commentLi.textContent = `${comment.username}: ${comment.comment}`;
   return commentLi;
