@@ -1,21 +1,48 @@
-const commentSection = async (id, name, comment) => {
-    const newRequest = new Request('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/FXnRwBWXn2Q28VOmP7yL/comments');
-  
-    const requestBody = {
-        "item_id": id,
-        "username": name,
-        "comment": comment,
-    }; 
-  
-    const fetchApi = await fetch(newRequest, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestBody),
-    });
-  
-    return fetchApi;
-  };
+const apiKey = 'FXnRwBWXn2Q28VOmP7yL';
+const end = '/comments';
+const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-console.log(commentSection(1, 'Bhushan', 'hello bro how are you'));
+export const renderComment = async (id, name, comment) => {
+  const response = await fetch(`${commUrl}${apiKey}${end}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ item_id: id, username: name, comment }),
+  });
+  return response;
+};
+
+const fetchComment = async (id) => {
+  const response = await fetch(`${commUrl}${apiKey}${end}?item_id=${id}`);
+  const comments = await response.json();
+  return comments;
+};
+
+const createCommentElement = (comment) => {
+  const commentLi = document.createElement('li');
+  commentLi.textContent = `${comment.username}: ${comment.comment}`;
+  return commentLi;
+};
+
+export const generateComment = async (id) => {
+  const commentUl = document.createElement('ul');
+  commentUl.id = 'comments-section';
+  commentUl.innerHTML = '';
+
+  const comments = await fetchComment(id);
+
+  if (comments.length === 0) {
+    const noCommentLi = document.createElement('p');
+    noCommentLi.className = 'no_comment_li';
+    noCommentLi.textContent = 'Be the first to comment';
+    commentUl.append(noCommentLi);
+  } else {
+    comments.forEach((comment) => {
+      const commentLi = createCommentElement(comment);
+      commentUl.append(commentLi);
+    });
+  }
+
+  return commentUl;
+};
