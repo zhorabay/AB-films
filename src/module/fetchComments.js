@@ -13,7 +13,7 @@ export const renderComment = async (id, name, comment) => {
   return response;
 };
 
-const fetchComment = async (id) => {
+export const fetchComment = async (id) => {
   const response = await fetch(`${commUrl}${apiKey}${end}?item_id=${id}`);
   const comments = await response.json();
   return comments;

@@ -1,4 +1,5 @@
 import fetchDataFromAPI from './fetchData.js';
+import { fetchComment, renderComment } from './fetchComments.js';
 
 let popup;
 
@@ -33,6 +34,28 @@ export const openPopup = async (id) => {
       </div>
     </div>
   `;
+
+  const submitButton = popupContent.querySelector('.submitComment');
+  submitButton.addEventListener('click', async () => {
+    const typeName = popupContent.querySelector('.typeName').value;
+    const typeComment = popupContent.querySelector('.typeComment').value;
+    if (typeName && typeComment) {
+    
+      const response = await renderComment(id, typeName, typeComment);
+      if (response.status === 200) {
+       
+        const commentsUl = popupContent.querySelector('.commentsDisplay');
+        const newComments = await fetchComment(id);
+        commentsUl.innerHTML = '';
+        newComments.forEach((comment) => {
+          const commentLi = createCommentElement(comment);
+          commentsUl.appendChild(commentLi);
+        });
+      
+
+      }
+    }
+  });
 
   popup.appendChild(popupContent);
 
