@@ -2,6 +2,7 @@ let popup;
 
 
 const popupContent = document.createElement('div');
+popupContent.setAttribute('class', 'popupContainer2');
 
 popupContent.innerHTML += `
 <div class="subDivOne">
@@ -25,6 +26,11 @@ popupContent.innerHTML += `
 export const openPopup = async () => {
 
    popup = document.querySelector('.popupContainer');
+
+   const backgroundElements = document.querySelectorAll('body > *:not(.popupContainer)');
+   backgroundElements.forEach((element) => {
+     element.classList.add('blur-background');
+   });
    
 popup.appendChild(popupContent);
 
@@ -34,6 +40,11 @@ popup.style.display = 'block';
 
 export const closePopup = async () => {
   popup.style.display = 'none';
+
+  const backgroundElements = document.querySelectorAll('body > *:not(.popupContainer)');
+   backgroundElements.forEach((element) => {
+     element.classList.remove('blur-background');
+   });
   
 }
 

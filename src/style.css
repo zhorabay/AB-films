@@ -128,19 +128,30 @@ footer {
 /* popup styling */
 
 .popupContainer {
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 90%;
   display: none;
-  background: #fff;
+  background: crimson;
   position: fixed;
   border-radius: 6px;
- top: 20%;
-  left: 20%;
+ top: 4%;
+  left: 13%;
   border-radius: 6px;
   text-align: center;
   justify-content: center;
   color: #333;
   overflow-y: scroll;
+  transition: filter 0.3s ease-in-out; 
+}
+
+.popupContainer2 {
+  height: 100%;
+}
+
+.blur-background {
+  filter: blur(8px); 
+  pointer-events: none; 
+  transition: filter 0.3s ease-in-out; 
 }
 
 .close-btn {
