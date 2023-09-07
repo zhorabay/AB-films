@@ -52,7 +52,8 @@ export const openPopup = async (id) => {
           commentsUl.appendChild(commentLi);
         });
       
-
+        popupContent.querySelector('.typeName').value = '';
+        popupContent.querySelector('.typeComment').value = '';
       }
     }
   });

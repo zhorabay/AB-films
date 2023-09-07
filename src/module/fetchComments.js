@@ -35,7 +35,7 @@ export const generateComment = async (id) => {
   if (comments.length === 0) {
     const noCommentLi = document.createElement('p');
     noCommentLi.className = 'no_comment_li';
-    noCommentLi.textContent = 'Be the first to comment';
+    noCommentLi.textContent = 'make a new comment';
     commentUl.append(noCommentLi);
   } else {
     comments.forEach((comment) => {
