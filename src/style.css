@@ -139,3 +139,37 @@ footer {
 .liked {
   color: red;
 }
+
+@media screen and (max-width: 768px) {
+  .display {
+    padding: 30px;
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .comment {
+    font-size: 12px;
+    padding: 3px 9px;
+  }
+
+  .films {
+    border: 1px solid grey;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+
+  .film-name {
+    font-size: 16px;
+  }
+
+  .like p {
+    font-size: 12px;
+  }
+
+  .like i {
+    font-size: 18px;
+  }
+}
