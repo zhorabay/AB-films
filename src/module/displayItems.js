@@ -1,6 +1,7 @@
 import fetchDataFromAPI from './fetchData.js';
 import fetchLikes from './displayLikes.js';
 import renderLike from './renderLike.js';
+import itemsCounter from './itemsCounter.js';
 
 const displayItems = async () => {
   const [likesData, baseData] = await Promise.all([fetchLikes(), fetchDataFromAPI()]);
@@ -33,12 +34,17 @@ const displayItems = async () => {
           </div>`;
   });
   document.querySelector('.display').innerHTML = items;
+  document.querySelector('#amount').innerHTML = itemsCounter();
 
   combinedData.forEach((values, index) => {
     const heartIcon = document.getElementById(`heart-icon-${index}`);
     heartIcon.addEventListener('click', (e) => {
       e.preventDefault();
       renderLike(values.id.toString());
+      heartIcon.classList.add('liked');
+      setTimeout(() => {
+        heartIcon.classList.remove('liked');
+      }, 500);
     });
   });
 };
