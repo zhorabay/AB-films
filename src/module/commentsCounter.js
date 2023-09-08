@@ -1,7 +1,7 @@
-const countCom = () => {
-  const numb = document.getElementById('comments-section').children.length;
-  return numb;
+const noOfCmntFunction = () => {
+  const cmntCheck = document.getElementById('comments-section').children.length;
+  return cmntCheck;
 };
 
 export const commentCount = (commentList) => commentList.length;
-export default countCom;
+export default noOfCmntFunction;

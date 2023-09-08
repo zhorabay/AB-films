@@ -35,7 +35,7 @@ const newCmnt = ({ comment, username, creation_date }) => {
   return cmtliEle;
 };
 
-export const generateComment = async (id) => {
+export const createCmnt = async (id) => {
   const allCmnt = document.createElement('ul');
   allCmnt.id = 'comments-section';
   allCmnt.innerHTML = '';

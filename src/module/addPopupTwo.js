@@ -1,12 +1,12 @@
 const baseApi = 'https://api.tvmaze.com/shows/';
 
-export const showDetails = async (id) => {
+export const detailsAll = async (id) => {
   try {
-    const response = await fetch(`${baseApi}${id}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+    const fetched = await fetch(`${baseApi}${id}`);
+    if (!fetched.ok) {
+      throw new Error(`HTTP error! Status: ${fetched.status}`);
     }
-    return await response.json();
+    return await fetched.json();
   } catch (error) {
     console.error('Fetch error:', error);
     throw error;
@@ -14,8 +14,8 @@ export const showDetails = async (id) => {
 };
 
 export const popupCloseBtn = () => {
-  const closeBtn = document.querySelector('.close-btn');
-  closeBtn.addEventListener('click', () => {
+  const crossBtn = document.querySelector('.close-btn');
+  crossBtn.addEventListener('click', () => {
     const popupModal = document.querySelector('.popupContainer');
     popupModal.style.display = 'none';
     document.body.style.overflow = 'scroll';

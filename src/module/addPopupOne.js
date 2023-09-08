@@ -1,8 +1,8 @@
 import {
   submitComment,
-  generateComment,
+  createCmnt,
 } from './allCommentsOne.js';
-import countCom from './commentsCounter.js';
+import noOfCmntFunction from './commentsCounter.js';
 
 export const createPopup = (details) => {
   const popupContent = document.createElement('div');
@@ -61,12 +61,11 @@ export const createPopup = (details) => {
 };
 
 export const createNewCmnt = async () => {
- 
   const form_newCmnt = document.querySelector('.inputComment');
   const btnSubmit = document.querySelector('.submitComment');
-  const commentCounter = countCom();
-  const commentSection = document.querySelector('.commentDisplay');
-  
+  const commentCounter = noOfCmntFunction();
+  const displayAllCmnt = document.querySelector('.commentDisplay');
+
   document.querySelector('.commentsCount').innerHTML = commentCounter;
   form_newCmnt.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -78,10 +77,10 @@ export const createNewCmnt = async () => {
     const comment = form_newCmnt.elements[1];
     if (!(name === '' || comment === '')) {
       await submitComment(btnSubmit.id, name.value, formattedDate, comment.value);
-      const commentslist = await generateComment(btnSubmit.id);
-      commentSection.innerHTML = '';
-      commentSection.append(commentslist);
-      const commentCounter = countCom();
+      const allListCmnt = await createCmnt(btnSubmit.id);
+      displayAllCmnt.innerHTML = '';
+      displayAllCmnt.append(allListCmnt);
+      const commentCounter = noOfCmntFunction();
       document.querySelector('.commentsCount').innerHTML = commentCounter;
       form_newCmnt.reset();
     }
