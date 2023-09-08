@@ -137,14 +137,14 @@ footer {
 /* popup styling */
 
 .popupContainer {
-  width: 75%;
+  width: 55%;
   height: 90%;
   display: none;
   background: crimson;
   position: fixed;
   border-radius: 10px;
   top: 4%;
-  left: 13%;
+  left: 25%;
   text-align: center;
   justify-content: center;
   color: #333;
@@ -170,7 +170,7 @@ footer {
   height: 45px;
   background: floralwhite;
   margin-right: 14px;
-  margin-top: 14px;
+  margin-top: -54px;
   font-size: 24px;
   font-family: monospace;
   font-weight: 600;
@@ -209,6 +209,10 @@ h2.movieName {
   justify-content: center;
   text-align: center;
   align-items: center;
+  border-radius: 6px;
+  background: bisque;
+  padding: 12px;
+  margin: 12px 8%;
 }
 
 .commentHeading {
@@ -218,12 +222,6 @@ h2.movieName {
   border-radius: 6px;
   padding: 4px;
   width: 30%;
-}
-
-.inputComments {
-  width: 50%;
-  padding: 8px;
-  margin-top: 26px;
 }
 
 input.typeName {
@@ -245,4 +243,62 @@ input.typeComment {
   height: 32px;
   box-shadow: 3px 3px lightgray;
   border-radius: 6px;
+}
+
+.description {
+  width: 75%;
+  background: bisque;
+  border-radius: 8px;
+}
+
+p#sumTxt {
+  font-size: 24px;
+  color: darkblue;
+  font-weight: 800;
+}
+
+.smallItems {
+  background: beige;
+  width: 52%;
+  margin-top: 5px;
+  border-radius: 8px;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 6px;
+  background: bisque;
+  padding: 12px;
+  margin: 12px 8%;
+}
+
+p.comments {
+  background: black;
+  color: white;
+  width: 114px;
+  border-radius: 8px;
+  margin: 7px;
+}
+
+.inputComments {
+  width: 52%;
+  padding: 8px;
+  margin-top: 26px;
+}
+
+.forStyling {
+  height: 8px;
+}
+
+li.comment-li {
+  display: flex;
+  background: darksalmon;
+  margin: 6px;
+  gap: 18px;
+  padding: 4px;
+  border-radius: 10px;
 }
