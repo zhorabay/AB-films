@@ -61,20 +61,20 @@ export const createPopup = (details) => {
 };
 
 export const createNewCmnt = async () => {
-  const form_newCmnt = document.querySelector('.inputComment');
+  const formNewCmnt = document.querySelector('.inputComment');
   const btnSubmit = document.querySelector('.submitComment');
   const commentCounter = noOfCmntFunction();
   const displayAllCmnt = document.querySelector('.commentDisplay');
 
   document.querySelector('.commentsCount').innerHTML = commentCounter;
-  form_newCmnt.addEventListener('submit', async (e) => {
+  formNewCmnt.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = form_newCmnt.elements[0];
+    const name = formNewCmnt.elements[0];
     const cDate = new Date();
 
     const formattedDate = cDate.toISOString().split('T')[0];
 
-    const comment = form_newCmnt.elements[1];
+    const comment = formNewCmnt.elements[1];
     if (!(name === '' || comment === '')) {
       await submitComment(btnSubmit.id, name.value, formattedDate, comment.value);
       const allListCmnt = await createCmnt(btnSubmit.id);
@@ -82,7 +82,7 @@ export const createNewCmnt = async () => {
       displayAllCmnt.append(allListCmnt);
       const commentCounter = noOfCmntFunction();
       document.querySelector('.commentsCount').innerHTML = commentCounter;
-      form_newCmnt.reset();
+      formNewCmnt.reset();
     }
   });
 };

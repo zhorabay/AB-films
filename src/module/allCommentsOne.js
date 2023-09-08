@@ -3,7 +3,7 @@ const apiMainId = '3Q9ZYh3KJIO90p2c2KK2';
 const tail = '/comments';
 
 export const submitComment = async (id, name, date, comment) => {
-  const API_Fetch = await fetch(`${apiURL}${apiMainId}${tail}`, {
+  const apiFetch = await fetch(`${apiURL}${apiMainId}${tail}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ export const submitComment = async (id, name, date, comment) => {
       item_id: id, creation_date: date, username: name, comment,
     }),
   });
-  return API_Fetch;
+  return apiFetch;
 };
 
 const commentGetter = async (id) => {
