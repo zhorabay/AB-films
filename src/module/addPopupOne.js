@@ -1,5 +1,5 @@
 import {
-  renderComment,
+  submitComment,
   generateComment,
 } from './allCommentsOne.js';
 import countCom from './commentsCounter.js';
@@ -61,11 +61,13 @@ export const createPopup = (details) => {
 };
 
 export const addComment = async () => {
-  const counter = countCom();
+ 
   const commentForm = document.querySelector('.inputComment');
   const formSubmitBtn = document.querySelector('.submitComment');
+  const commentCounter = countCom();
   const commentSection = document.querySelector('.commentDisplay');
-  document.querySelector('.commentsCount').innerHTML = counter;
+  
+  document.querySelector('.commentsCount').innerHTML = commentCounter;
   commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = commentForm.elements[0];
@@ -75,12 +77,12 @@ export const addComment = async () => {
 
     const comment = commentForm.elements[1];
     if (!(name === '' || comment === '')) {
-      await renderComment(formSubmitBtn.id, name.value, formattedDate, comment.value);
+      await submitComment(formSubmitBtn.id, name.value, formattedDate, comment.value);
       const commentslist = await generateComment(formSubmitBtn.id);
       commentSection.innerHTML = '';
       commentSection.append(commentslist);
-      const counter = countCom();
-      document.querySelector('.commentsCount').innerHTML = counter;
+      const commentCounter = countCom();
+      document.querySelector('.commentsCount').innerHTML = commentCounter;
       commentForm.reset();
     }
   });
