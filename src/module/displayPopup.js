@@ -10,20 +10,16 @@ const popShow = async (id) => {
 
   allpopup.innerHTML = '';
 
-  try {
-    const movieDetail = await detailsAll(id);
-    allpopup.append(createPopup(movieDetail));
-    allpopup.style.display = 'flex';
+  const movieDetail = await detailsAll(id);
+  allpopup.append(createPopup(movieDetail));
+  allpopup.style.display = 'flex';
 
-    const commentLine = document.querySelector('.commentDisplay');
-    const comments = await createCmnt(id);
-    commentLine.append(comments);
+  const commentLine = document.querySelector('.commentDisplay');
+  const comments = await createCmnt(id);
+  commentLine.append(comments);
 
-    popupCloseBtn();
-    createNewCmnt();
-  } catch (error) {
-    console.error('Display Popup error:', error);
-  }
+  popupCloseBtn();
+  createNewCmnt();
 };
 
 const openPopup = () => {

@@ -1,16 +1,11 @@
 const baseApi = 'https://api.tvmaze.com/shows/';
 
 export const detailsAll = async (id) => {
-  try {
-    const fetched = await fetch(`${baseApi}${id}`);
-    if (!fetched.ok) {
-      throw new Error(`HTTP error! Status: ${fetched.status}`);
-    }
-    return await fetched.json();
-  } catch (error) {
-    console.error('Fetch error:', error);
-    throw error;
+  const fetched = await fetch(`${baseApi}${id}`);
+  if (!fetched.ok) {
+    throw new Error(`HTTP error! Status: ${fetched.status}`);
   }
+  return fetched.json();
 };
 
 export const popupCloseBtn = () => {
