@@ -39,11 +39,11 @@ export const createPopup = (details) => {
 
           <p class="comments">Comments(<span class="commentsCount"></span>)</p>
 
-          <div class="inputComment">
+          <form class="inputComment">
               <input required type="text" class="typeName" id="typeName" placeholder="Your Name"><br>
               <input required type="text" class="typeComment" id="typeComment" placeholder="Your comment"><br>
               <button type="submit" class="submitComment" id="${details.id}">Submit</button>
-          </div>
+          </form>
 
           <div class="commentDisplay">
           </div>
@@ -70,10 +70,12 @@ export const addComment = async () => {
     e.preventDefault();
     const name = commentForm.elements[0];
     const cDate = new Date();
-    console.log(cDate.toDateString());
+
+    const formattedDate = cDate.toISOString().split('T')[0];
+
     const comment = commentForm.elements[1];
     if (!(name === '' || comment === '')) {
-      await renderComment(formSubmitBtn.id, name.value, comment.value);
+      await renderComment(formSubmitBtn.id, name.value, formattedDate, comment.value);
       const commentslist = await generateComment(formSubmitBtn.id);
       commentSection.innerHTML = '';
       commentSection.append(commentslist);

@@ -2,13 +2,15 @@ const apiKey = '3Q9ZYh3KJIO90p2c2KK2';
 const end = '/comments';
 const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-export const renderComment = async (id, name, comment) => {
+export const renderComment = async (id, name, date, comment) => {
   const response = await fetch(`${commUrl}${apiKey}${end}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ item_id: id, username: name, comment }),
+    body: JSON.stringify({
+      item_id: id, creation_date: date, username: name, comment,
+    }),
   });
   return response;
 };
@@ -23,13 +25,11 @@ const fetchComment = async (id) => {
   return itemData;
 };
 
-const createComments = ({ comment, username, creationDate }) => {
-  const cDate = creationDate;
-
+const createComments = ({ comment, username, creation_date }) => {
   const commentli = document.createElement('li');
   commentli.className = 'comment-li';
   commentli.innerHTML = `
-  <p class="date"><span><i class="fa-solid fa-user"> </i><span>${username} </span> </span><span>${cDate} </span></p>
+  <p class="date"><span><i class="fa-solid fa-user"> </i><span>${username} </span> </span><span>${creation_date} </span></p>
   <p class = "user-comment"><span> ${comment} </span></p>
   `;
   return commentli;
