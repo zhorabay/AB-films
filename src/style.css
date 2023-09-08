@@ -300,45 +300,46 @@ li.comment-li {
   gap: 18px;
   padding: 4px;
   border-radius: 10px;
-=======
-.fa-heart {
-  color: grey;
-}
 
-.liked {
-  color: red;
-}
-
-@media screen and (max-width: 768px) {
-  .display {
-    padding: 30px;
-    grid-template-columns: 30% 30% 30%;
+  .fa-heart {
+    color: grey;
   }
 
-  .nav-list {
-    gap: 20px;
+  .liked {
+    color: red;
   }
 
-  .comment {
-    font-size: 12px;
-    padding: 3px 9px;
-  }
+  @media screen and (max-width: 768px) {
+    .display {
+      padding: 30px;
+      grid-template-columns: 30% 30% 30%;
+    }
 
-  .films {
-    border: 1px solid grey;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 30px;
-  }
+    .nav-list {
+      gap: 20px;
+    }
 
-  .film-name {
-    font-size: 16px;
-  }
+    .comment {
+      font-size: 12px;
+      padding: 3px 9px;
+    }
 
-  .like p {
-    font-size: 12px;
-  }
+    .films {
+      border: 1px solid grey;
+      border-bottom-right-radius: 30px;
+      border-top-left-radius: 30px;
+    }
 
-  .like i {
-    font-size: 18px;
+    .film-name {
+      font-size: 16px;
+    }
+
+    .like p {
+      font-size: 12px;
+    }
+
+    .like i {
+      font-size: 18px;
+    }
   }
 }
