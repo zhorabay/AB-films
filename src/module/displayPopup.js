@@ -1,7 +1,7 @@
-import { createPopup, addComment } from './addPopupOne.js';
+import { createPopup, createNewCmnt } from './addPopupOne.js';
 
 import { generateComment } from './allCommentsOne.js';
-import { showDetails, addClosePopupEvent } from './addPopupTwo.js';
+import { showDetails, popupCloseBtn } from './addPopupTwo.js';
 
 const displayPopup = async (id) => {
   const popupModal = document.querySelector('.popupContainer');
@@ -19,14 +19,14 @@ const displayPopup = async (id) => {
     const comments = await generateComment(id);
     commentLine.append(comments);
 
-    addClosePopupEvent();
-    addComment();
+    popupCloseBtn();
+    createNewCmnt();
   } catch (error) {
     console.error('Display Popup error:', error);
   }
 };
 
-const addCommentPopupEvent = () => {
+const openPopup = () => {
   const commentBtns = document.querySelectorAll('.comment');
   commentBtns.forEach((btn) => {
     btn.addEventListener('click', async (e) => {
@@ -37,4 +37,4 @@ const addCommentPopupEvent = () => {
   });
 };
 
-export default addCommentPopupEvent;
+export default openPopup;

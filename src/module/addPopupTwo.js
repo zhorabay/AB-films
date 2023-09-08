@@ -13,7 +13,7 @@ export const showDetails = async (id) => {
   }
 };
 
-export const addClosePopupEvent = () => {
+export const popupCloseBtn = () => {
   const closeBtn = document.querySelector('.close-btn');
   closeBtn.addEventListener('click', () => {
     const popupModal = document.querySelector('.popupContainer');

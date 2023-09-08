@@ -60,30 +60,30 @@ export const createPopup = (details) => {
   return popupContent;
 };
 
-export const addComment = async () => {
+export const createNewCmnt = async () => {
  
-  const commentForm = document.querySelector('.inputComment');
-  const formSubmitBtn = document.querySelector('.submitComment');
+  const form_newCmnt = document.querySelector('.inputComment');
+  const btnSubmit = document.querySelector('.submitComment');
   const commentCounter = countCom();
   const commentSection = document.querySelector('.commentDisplay');
   
   document.querySelector('.commentsCount').innerHTML = commentCounter;
-  commentForm.addEventListener('submit', async (e) => {
+  form_newCmnt.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = commentForm.elements[0];
+    const name = form_newCmnt.elements[0];
     const cDate = new Date();
 
     const formattedDate = cDate.toISOString().split('T')[0];
 
-    const comment = commentForm.elements[1];
+    const comment = form_newCmnt.elements[1];
     if (!(name === '' || comment === '')) {
-      await submitComment(formSubmitBtn.id, name.value, formattedDate, comment.value);
-      const commentslist = await generateComment(formSubmitBtn.id);
+      await submitComment(btnSubmit.id, name.value, formattedDate, comment.value);
+      const commentslist = await generateComment(btnSubmit.id);
       commentSection.innerHTML = '';
       commentSection.append(commentslist);
       const commentCounter = countCom();
       document.querySelector('.commentsCount').innerHTML = commentCounter;
-      commentForm.reset();
+      form_newCmnt.reset();
     }
   });
 };
