@@ -15,41 +15,41 @@ export const submitComment = async (id, name, date, comment) => {
   return API_Fetch;
 };
 
-const fetchComment = async (id) => {
-  const reponseComment = await fetch(`${apiURL}${apiMainId}${tail}?item_id=${id}`);
-  const itemData = await reponseComment.json();
+const commentGetter = async (id) => {
+  const gotCmt = await fetch(`${apiURL}${apiMainId}${tail}?item_id=${id}`);
+  const intD = await gotCmt.json();
 
-  if (!reponseComment.ok) {
+  if (!gotCmt.ok) {
     return null;
   }
-  return itemData;
+  return intD;
 };
 
-const createComments = ({ comment, username, creation_date }) => {
-  const commentli = document.createElement('li');
-  commentli.className = 'comment-li';
-  commentli.innerHTML = `
+const newCmnt = ({ comment, username, creation_date }) => {
+  const cmtliEle = document.createElement('li');
+  cmtliEle.className = 'comment-li';
+  cmtliEle.innerHTML = `
   <p class="date"><span><i class="fa-solid fa-user"> </i><span>${username} </span> </span><span>${creation_date} </span></p>
   <p class = "user-comment"><span> ${comment} </span></p>
   `;
-  return commentli;
+  return cmtliEle;
 };
 
 export const generateComment = async (id) => {
-  const commentUl = document.createElement('ul');
-  commentUl.id = 'comments-section';
-  commentUl.innerHTML = '';
-  const comments = await fetchComment(id);
+  const allCmnt = document.createElement('ul');
+  allCmnt.id = 'comments-section';
+  allCmnt.innerHTML = '';
+  const comments = await commentGetter(id);
 
   if (comments === null) {
-    const noCommentLi = document.createElement('p');
-    noCommentLi.className = 'no_comment_li';
-    noCommentLi.textContent = 'Be the first to comment';
-    commentUl.append(noCommentLi);
+    const nocmtliEle = document.createElement('p');
+    nocmtliEle.className = 'no_comment_li';
+    nocmtliEle.textContent = 'Be the first to comment';
+    allCmnt.append(nocmtliEle);
   } else {
     comments.forEach((comment) => {
-      commentUl.append(createComments(comment));
+      allCmnt.append(newCmnt(comment));
     });
   }
-  return commentUl;
+  return allCmnt;
 };
