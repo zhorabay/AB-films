@@ -26,7 +26,7 @@ const displayPopup = async (id) => {
   }
 };
 
-export const addCommentPopupEvent = () => {
+const addCommentPopupEvent = () => {
   const commentBtns = document.querySelectorAll('.comment');
   commentBtns.forEach((btn) => {
     btn.addEventListener('click', async (e) => {
@@ -36,3 +36,5 @@ export const addCommentPopupEvent = () => {
     });
   });
 };
+
+export default addCommentPopupEvent;

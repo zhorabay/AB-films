@@ -69,6 +69,8 @@ export const addComment = async () => {
   commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = commentForm.elements[0];
+    const cDate = new Date();
+    console.log(cDate.toDateString());
     const comment = commentForm.elements[1];
     if (!(name === '' || comment === '')) {
       await renderComment(formSubmitBtn.id, name.value, comment.value);

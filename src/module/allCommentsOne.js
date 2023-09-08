@@ -1,4 +1,4 @@
-const apiKey = '1qXMsA9cV2Pv46sO3dUb';
+const apiKey = '3Q9ZYh3KJIO90p2c2KK2';
 const end = '/comments';
 const commUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
