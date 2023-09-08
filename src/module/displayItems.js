@@ -28,7 +28,8 @@ const displayItems = async () => {
                       <p id="like-count-${values.id}">${values.likes}</p>
                       <p class="likes">likes</p>
                   </div>
-                  <button class="comment">Comments</button>
+                  <button data-id="${values.id}" class="comment">Comments</button>
+
               </div>
           </div>`;
   });
