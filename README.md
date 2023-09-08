@@ -1,7 +1,12 @@
 <a name="readme-top"></a>
 <div align="center">
-Universal-movie-website  <h3><b></b></h3>
+A&B-films-website  <h3><b></b></h3>
 </div>
+
+<div align="center">
+<img src="images/logo.png" alt="logo">
+</div>
+
 
 # 📗 Table of Contents
 
@@ -10,6 +15,7 @@ Universal-movie-website  <h3><b></b></h3>
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Project presentation ](#-project-presentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
   - [👥 Authors ](#-authors-)
@@ -20,7 +26,7 @@ Universal-movie-website  <h3><b></b></h3>
   - [📝 License ](#-license-)
 
 
-**[A&B films]** shows list of popular movies<br />
+**[A&B films]** shows list of popular TV series<br />
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,6 +48,14 @@ Universal-movie-website  <h3><b></b></h3>
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo link](https://zhorabay.github.io/AB-films/dist)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Project presentation <a name="live-demo"></a>
+
+- [Project presentation link](https://drive.google.com/file/d/1az8VnbIyQmzUE_xnKjtYX8YKEDsuXnQq/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
