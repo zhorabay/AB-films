@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Serif Display', serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+  background-color: black;
+}
+
+img {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.nav img {
+  width: 55px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list li:hover {
+  color: #cd79f1;
+}
+
+footer {
+  background-color: rgb(193, 66, 236);
+  text-align: center;
+  padding: 20px;
+}
+
+.license {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.display {
+  background-color: rgb(20, 20, 20);
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 16px;
+  padding: 30px 90px;
+  text-align: center;
+}
+
+.films {
+  border: 1px solid grey;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 12px;
+  background: rgb(193, 66, 236);
+  background: linear-gradient(180deg, rgba(193, 66, 236, 1) 0%, rgba(202, 104, 235, 1) 0%, rgba(20, 20, 20, 0.7973564425770308) 17%);
+}
+
+.films:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.film-name {
+  font-size: 22px;
+  flex-wrap: wrap;
+  font-weight: 500;
+  color: #fff;
+}
+
+.film-image {
+  padding: 6px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.like i {
+  padding: 2px;
+  font-size: 25px;
+}
+
+.like p {
+  font-style: italic;
+  font-weight: 300;
+  color: antiquewhite;
+  font-size: 18px;
+}
+
+.comment {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #cd79f1;
+}
+
+.comment:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  background-color: #fff;
+  color: black;
+}
+
+/* popup styling */
+
+.popupContainer {
+  width: 55%;
+  height: 90%;
+  display: none;
+  background: crimson;
+  position: fixed;
+  border-radius: 10px;
+  top: 4%;
+  left: 25%;
+  text-align: center;
+  justify-content: center;
+  color: #333;
+  overflow-y: scroll;
+  transition: filter 0.3s ease-in-out;
+}
+
+.popupContainer2 {
+  height: 95%;
+}
+
+.blur-background {
+  filter: blur(8px);
+  pointer-events: none;
+  transition: filter 0.3s ease-in-out;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  width: 45px;
+  border-radius: 22px;
+  height: 45px;
+  background: floralwhite;
+  margin-right: 14px;
+  margin-top: -54px;
+  font-size: 24px;
+  font-family: monospace;
+  font-weight: 600;
+  border: 5px solid rgb(26, 94, 156);
+}
+
+.subDivOne {
+  display: flex;
+  height: 55%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 66px;
+}
+
+img.movie-img {
+  width: 50%;
+  height: 450px;
+  border-radius: 20px;
+}
+
+h2.movieName {
+  margin-top: 16px;
+  background-color: bisque;
+  color: black;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 22px;
+  width: 38%;
+}
+
+.subDivTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 6px;
+  background: bisque;
+  padding: 12px;
+  margin: 12px 8%;
+}
+
+.commentHeading {
+  margin-top: 12px;
+  background-color: bisque;
+  color: black;
+  border-radius: 6px;
+  padding: 4px;
+  width: 30%;
+}
+
+input.typeName {
+  width: 90%;
+  padding: 4px;
+  height: 28px;
+}
+
+input.typeComment {
+  width: 90%;
+  padding: 4px;
+  height: 28px;
+  margin-top: 6px;
+}
+
+.submitComment {
+  margin-top: 6px;
+  width: 62px;
+  height: 32px;
+  box-shadow: 3px 3px lightgray;
+  border-radius: 6px;
+}
+
+.description {
+  width: 75%;
+  background: bisque;
+  border-radius: 8px;
+}
+
+p#sumTxt {
+  font-size: 24px;
+  color: darkblue;
+  font-weight: 800;
+}
+
+.smallItems {
+  background: beige;
+  width: 52%;
+  margin-top: 5px;
+  border-radius: 8px;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 6px;
+  background: bisque;
+  padding: 12px;
+  margin: 12px 8%;
+}
+
+p.comments {
+  background: black;
+  color: white;
+  width: 114px;
+  border-radius: 8px;
+  margin: 7px;
+}
+
+.inputComments {
+  width: 52%;
+  padding: 8px;
+  margin-top: 26px;
+}
+
+.forStyling {
+  height: 8px;
+}
+
+li.comment-li {
+  display: flex;
+  background: darksalmon;
+  margin: 6px;
+  gap: 18px;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.fa-solid {
+  color: grey;
+}
+
+.liked {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .display {
+    padding: 30px;
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .nav-list {
+    gap: 19px;
+  }
+
+  .comment {
+    font-size: 12px;
+    padding: 3px 9px;
+  }
+
+  .films {
+    border: 1px solid grey;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+
+  .film-name {
+    font-size: 16px;
+  }
+
+  .like p {
+    font-size: 12px;
+  }
+
+  .like i {
+    font-size: 18px;
+  }
+}
