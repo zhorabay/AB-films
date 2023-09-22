@@ -4,7 +4,7 @@
 </div>
 
 <div align="center">
-<img src="./src/images/logo.png" alt="logo">
+<img src="../src/images/logo.png" alt="logo">
 </div>
 
 # 📗 Table of Contents
