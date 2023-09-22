@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 <div align="center">
-A&B-films-website  <h3><b></b></h3>
+<h3><b>A&B-films-website</b></h3>
 </div>
 
 <div align="center">
-<img src="images/logo.png" alt="logo">
+<img src="./src/images/logo.png" alt="logo">
 </div>
 
 # 📗 Table of Contents
@@ -120,7 +120,7 @@ If you like this project, pplease, feel free to star the repository and share it
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse team and Code reviewers who helped us with creating this project.
+We would like to thank the Microverse team and Code reviewers who helped us create this project. Also, we would like to express our sincere gratitude to [Lucas Erkana](https://github.com/Lucas-Erkana) for his valuable assistance in solving a problem with fetching API in the AB films app. His expertise and guidance were instrumental in finding a solution.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
